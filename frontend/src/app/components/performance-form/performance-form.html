@@ -1,0 +1,342 @@
+<div class="pov-form-page">
+
+  <div class="pov-form-hero">
+    <div>
+      <h1><span>Performance</span> et Tests</h1>
+      <p>Remplissez ce formulaire pour évaluer la performance, la qualité fonctionnelle et la gestion de vos applications.</p>
+    </div>
+
+    <div class="pov-form-summary">
+      <h2>Confoline Business Services</h2>
+      <ul>
+        <li><span>✓</span> Tel : +216 55 98 55 33</li>
+        <li><span>✓</span> 015 Av. Abdelhamid Ibn Badis, 1002 Belvédère Tunisie</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="pov-form-shell">
+    <form (submit)="onSubmit($event)">
+
+      <div class="pov-form-section">
+        <div class="pov-form-section-title">
+          <div class="pov-form-section-number">1</div>
+          <div>
+            <h3>Informations Générales</h3>
+            <p>Identité et coordonnées de l'entreprise</p>
+          </div>
+        </div>
+
+        <div class="pov-form-grid">
+          <div class="pov-field">
+            <span>Nom</span>
+            <input type="text" name="nom" required>
+          </div>
+          <div class="pov-field">
+            <span>Prénom</span>
+            <input type="text" name="prenom" required>
+          </div>
+          <div class="pov-field">
+            <span>Email</span>
+            <input type="email" name="email" required>
+          </div>
+          <div class="pov-field">
+            <span>Mobile</span>
+            <input type="tel" name="mobile">
+          </div>
+          <div class="pov-field">
+            <span>Entreprise</span>
+            <input type="text" name="entreprise" required>
+          </div>
+          <div class="pov-field">
+            <span>Secteur d'activité</span>
+            <input type="text" name="secteur" required>
+          </div>
+        </div>
+      </div>
+
+      <div class="pov-form-section">
+        <div class="pov-form-section-title">
+          <div class="pov-form-section-number">2</div>
+          <div>
+            <h3>Informations sur la performance</h3>
+            <p>Gestion des charges et comportement applicatif sous stress</p>
+          </div>
+        </div>
+
+        <div class="pov-form-grid">
+          <div class="pov-field pov-field--full">
+            <span>Votre plateforme a-t-elle déjà subi des dégradations de performance ou des interruptions lors de pics de trafic (ex : soldes, campagnes) ?</span>
+            <div class="pov-choice-grid">
+              <label class="pov-choice"><input type="radio" name="degradations_trafic" value="jamais" required> Jamais</label>
+              <label class="pov-choice"><input type="radio" name="degradations_trafic" value="rarement" required> Rarement</label>
+              <label class="pov-choice"><input type="radio" name="degradations_trafic" value="oui" required> Oui, impact sur les ventes</label>
+            </div>
+          </div>
+
+          <div class="pov-field pov-field--full">
+            <span>Réalisez-vous des tests de charge ?</span>
+            <div class="pov-choice-grid">
+              <label class="pov-choice"><input type="radio" name="tests_charge" value="toujours" required> Toujours</label>
+              <label class="pov-choice"><input type="radio" name="tests_charge" value="parfois" required> Parfois</label>
+              <label class="pov-choice"><input type="radio" name="tests_charge" value="jamais" required> Jamais</label>
+            </div>
+          </div>
+
+          <div class="pov-field pov-field--full">
+            <span>Comment sont réalisés vos tests de charge ?</span>
+            <div class="pov-choice-grid">
+              <label class="pov-choice"><input type="radio" name="methode_charge" value="manuellement" > Manuellement</label>
+              <label class="pov-choice"><input type="radio" name="methode_charge" value="automatises" > Automatisés</label>
+              <label class="pov-choice"><input type="radio" name="methode_charge" value="les_deux" > Les deux</label>
+            </div>
+          </div>
+
+          <div class="pov-field pov-field--full">
+            <span>Quels outils utilisez-vous pour les tests de charge ?</span>
+            <div class="pov-checkbox-grid">
+              <label class="pov-checkbox-choice"><input type="checkbox" name="outils_charge" value="loadrunner"> LoadRunner</label>
+              <label class="pov-checkbox-choice"><input type="checkbox" name="outils_charge" value="jmeter"> JMeter</label>
+              <label class="pov-checkbox-choice"><input type="checkbox" name="outils_charge" value="k6"> K6</label>
+              <label class="pov-checkbox-choice"><input type="checkbox" name="outils_charge" value="neoload"> NeoLoad</label>
+              <label class="pov-checkbox-choice"><input type="checkbox" name="outils_charge" value="gatling"> Gatling</label>
+              <label class="pov-checkbox-choice"><input type="checkbox" name="outils_charge" value="blazemeter"> BlazeMeter</label>
+            </div>
+            <input type="text" name="outils_charge_autre" placeholder="autre outil de charge ?">
+          </div>
+        </div>
+      </div>
+
+      <div class="pov-form-section">
+        <div class="pov-form-section-title">
+          <div class="pov-form-section-number">3</div>
+          <div>
+            <h3>Informations sur les tests fonctionnels</h3>
+            <p>Qualité du code, intégration continue et automatisation</p>
+          </div>
+        </div>
+
+        <div class="pov-form-grid">
+          <div class="pov-field pov-field--full">
+            <span>Votre application a-t-elle déjà subi des anomalies fonctionnelles en production (bugs, erreurs, régressions) ?</span>
+            <div class="pov-choice-grid">
+              <label class="pov-choice"><input type="radio" name="anomalies_prod" value="jamais" required> Jamais</label>
+              <label class="pov-choice"><input type="radio" name="anomalies_prod" value="rarement" required> Rarement</label>
+              <label class="pov-choice"><input type="radio" name="anomalies_prod" value="oui" required> Oui, impact utilisateur / business</label>
+            </div>
+          </div>
+
+          <div class="pov-field pov-field--full">
+            <span>Réalisez-vous des tests fonctionnels ?</span>
+            <div class="pov-choice-grid">
+              <label class="pov-choice"><input type="radio" name="tests_fonctionnels" value="toujours" required> Toujours</label>
+              <label class="pov-choice"><input type="radio" name="tests_fonctionnels" value="parfois" required> Parfois</label>
+              <label class="pov-choice"><input type="radio" name="tests_fonctionnels" value="jamais" required> Jamais</label>
+            </div>
+          </div>
+
+          <div class="pov-field pov-field--full">
+            <span>Comment sont réalisés vos tests fonctionnels ?</span>
+            <div class="pov-choice-grid">
+              <label class="pov-choice"><input type="radio" name="methode_fonctionnels" value="manuellement" > Manuellement</label>
+              <label class="pov-choice"><input type="radio" name="methode_fonctionnels" value="automatises" > Automatisés</label>
+              <label class="pov-choice"><input type="radio" name="methode_fonctionnels" value="les_deux" > Les deux</label>
+            </div>
+          </div>
+
+          <div class="pov-field pov-field--full">
+            <span>Quels outils utilisez-vous pour les tests fonctionnels ?</span>
+            <div class="pov-checkbox-grid">
+              <label class="pov-checkbox-choice"><input type="checkbox" name="outils_fonc" value="selenium"> Selenium</label>
+              <label class="pov-checkbox-choice"><input type="checkbox" name="outils_fonc" value="cypress"> Cypress</label>
+              <label class="pov-checkbox-choice"><input type="checkbox" name="outils_fonc" value="playwright"> Playwright</label>
+              <label class="pov-checkbox-choice"><input type="checkbox" name="outils_fonc" value="uft"> UFT (OpenText)</label>
+              <label class="pov-checkbox-choice"><input type="checkbox" name="outils_fonc" value="testcomplete"> TestComplete</label>
+              <label class="pov-checkbox-choice"><input type="checkbox" name="outils_fonc" value="postman"> Postman</label>
+              <label class="pov-checkbox-choice"><input type="checkbox" name="outils_fonc" value="katalon"> Katalon Studio</label>
+            </div>
+            <input type="text" name="outils_fonc_autre" placeholder="Précisez un autre outil fonctionnel...">
+          </div>
+
+          <div class="pov-field pov-field--full">
+            <span>Utilisez-vous des pipelines CI/CD ?</span>
+            <div class="pov-choice-grid">
+              <label class="pov-choice"><input type="radio" name="cicd_use" value="oui" required> Oui</label>
+              <label class="pov-choice"><input type="radio" name="cicd_use" value="non"> Non</label>
+            </div>
+          </div>
+
+          <div class="pov-field pov-field--full">
+            <span>Quels outils CI/CD utilisez-vous ?</span>
+            <div class="pov-checkbox-grid">
+              <label class="pov-checkbox-choice"><input type="checkbox" name="outils_cicd" value="jenkins"> Jenkins</label>
+              <label class="pov-checkbox-choice"><input type="checkbox" name="outils_cicd" value="gitlab"> GitLab CI</label>
+              <label class="pov-checkbox-choice"><input type="checkbox" name="outils_cicd" value="azure"> Azure DevOps</label>
+              <label class="pov-checkbox-choice"><input type="checkbox" name="outils_cicd" value="aucun"> Aucun</label>
+            </div>
+            <input type="text" name="outils_cicd_autre" placeholder="Précisez un autre outil CI/CD...">
+          </div>
+
+          <div class="pov-field pov-field--full">
+            <span>Les tests de performance sont-ils intégrés dans le CI/CD ?</span>
+            <div class="pov-choice-grid">
+              <label class="pov-choice"><input type="radio" name="perf_inc_cicd" value="oui" required> Oui</label>
+              <label class="pov-choice"><input type="radio" name="perf_inc_cicd" value="non" required> Non</label>
+            </div>
+          </div>
+
+          <div class="pov-field pov-field--full">
+            <span>À quel moment les tests sont-ils réalisés ?</span>
+            <div class="pov-choice-grid">
+              <label class="pov-choice"><input type="radio" name="timing_tests" value="shift_left" > Dès le développement (Shift-left)</label>
+              <label class="pov-choice"><input type="radio" name="timing_tests" value="avant_prod" > Avant mise en production</label>
+              <label class="pov-choice"><input type="radio" name="timing_tests" value="apres_incident" > Après incident en production</label>
+            </div>
+          </div>
+
+          <div class="pov-field pov-field--full">
+            <span>Prenez-vous en compte la distribution réelle de la charge utilisateur dans vos tests de performance ?</span>
+            <div class="pov-choice-grid">
+              <label class="pov-choice"><input type="radio" name="charge_reelle" value="oui" > Oui</label>
+              <label class="pov-choice"><input type="radio" name="charge_reelle" value="partiellement" > Partiellement</label>
+              <label class="pov-choice"><input type="radio" name="charge_reelle" value="non" > Non</label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="pov-form-section">
+        <div class="pov-form-section-title">
+          <div class="pov-form-section-number">4</div>
+          <div>
+            <h3>Gestion des applications et projets</h3>
+            <p>Méthodologies, traçabilité et couverture globale</p>
+          </div>
+        </div>
+
+        <div class="pov-form-grid">
+          <div class="pov-field pov-field--full">
+            <span>Disposez-vous d'un outil pour gérer vos applications et projets (de la demande jusqu'à la livraison) ?</span>
+            <div class="pov-choice-grid">
+              <label class="pov-choice"><input type="radio" name="outil_gestion" value="dedie" required> Oui, un outil dédié</label>
+              <label class="pov-choice"><input type="radio" name="outil_gestion" value="integre" required> Oui, intégré (DevOps / ITSM / Projets)</label>
+              <label class="pov-choice"><input type="radio" name="outil_gestion" value="non" required> Non</label>
+            </div>
+          </div>
+
+          <div class="pov-field pov-field--full">
+            <span>Quels aspects sont couverts dans votre gestion des applications ?</span>
+            <div class="pov-checkbox-grid">
+              <label class="pov-checkbox-choice"><input type="checkbox" name="aspects_couverts" value="besoins"> Gestion des besoins</label>
+              <label class="pov-checkbox-choice"><input type="checkbox" name="aspects_couverts" value="backlog"> Backlog & tâches</label>
+              <label class="pov-checkbox-choice"><input type="checkbox" name="aspects_couverts" value="tests"> Gestion des tests</label>
+              <label class="pov-checkbox-choice"><input type="checkbox" name="aspects_couverts" value="anomalies"> Anomalies & bugs</label>
+              <label class="pov-checkbox-choice"><input type="checkbox" name="aspects_couverts" value="versions"> Versions & livraisons</label>
+              <label class="pov-checkbox-choice"><input type="checkbox" name="aspects_couverts" value="tracabilite"> Traçabilité bout-en-bout</label>
+            </div>
+            <input type="text" name="aspects_couverts_autre" placeholder="Précisez un autre aspect couvert...">
+          </div>
+
+          <div class="pov-field pov-field--full">
+            <span>Comment organisez-vous vos projets de développement ?</span>
+            <div class="pov-choice-grid">
+              <label class="pov-choice"><input type="radio" name="methodo_projet" value="agile" required> Agile (Scrum / Kanban)</label>
+              <label class="pov-choice"><input type="radio" name="methodo_projet" value="v" required> Cycle en V (Waterfall)</label>
+              <label class="pov-choice"><input type="radio" name="methodo_projet" value="hybride" required> Hybride</label>
+              <label class="pov-choice"><input type="radio" name="methodo_projet" value="aucune" required> Pas de méthode définie</label>
+            </div>
+          </div>
+
+          <div class="pov-field pov-field--full">
+            <span>Quels outils utilisez-vous pour gérer vos projets et applications ?</span>
+            <div class="pov-checkbox-grid">
+              <label class="pov-checkbox-choice"><input type="checkbox" name="outils_gestion_proj" value="jira"> Jira</label>
+              <label class="pov-checkbox-choice"><input type="checkbox" name="outils_gestion_proj" value="azure_devops"> Azure DevOps</label>
+              <label class="pov-checkbox-choice"><input type="checkbox" name="outils_gestion_proj" value="gitlab"> GitLab</label>
+              <label class="pov-checkbox-choice"><input type="checkbox" name="outils_gestion_proj" value="doors"> IBM DOORS / similaire</label>
+              <label class="pov-checkbox-choice"><input type="checkbox" name="outils_gestion_proj" value="interne"> Développés en interne</label>
+            </div>
+            <input type="text" name="outils_gestion_proj_autre" placeholder="Précisez un autre outil de gestion de projet...">
+          </div>
+
+          <div class="pov-field pov-field--full">
+            <span>Votre solution est-elle intégrée avec d'autres outils ?</span>
+            <div class="pov-checkbox-grid">
+              <label class="pov-checkbox-choice"><input type="checkbox" name="integrations" value="dev_cicd"> Développement / CI-CD</label>
+              <label class="pov-checkbox-choice"><input type="checkbox" name="integrations" value="tests_auto"> Outils de test automatisé</label>
+              <label class="pov-checkbox-choice"><input type="checkbox" name="integrations" value="itsm"> Service Desk / ITSM</label>
+              <label class="pov-checkbox-choice"><input type="checkbox" name="integrations" value="monitoring"> Monitoring / Observabilité</label>
+              <label class="pov-checkbox-choice"><input type="checkbox" name="integrations" value="aucun"> Aucun</label>
+            </div>
+            <input type="text" name="integrations_autre" placeholder="Précisez une autre intégration...">
+          </div>
+        </div>
+      </div>
+
+      <div class="pov-form-section">
+        <div class="pov-form-section-title">
+          <div class="pov-form-section-number">5</div>
+          <div>
+            <h3>Impact et Métriques</h3>
+            <p>Ressources et estimation des coûts liés aux anomalies</p>
+          </div>
+        </div>
+
+        <div class="pov-form-grid">
+          <div class="pov-field">
+            <span>Ressources (FTE) dédiées à la performance</span>
+            <input type="number" name="ressources_fte" placeholder="Nombre de personnes" required>
+          </div>
+
+          <div class="pov-field">
+            <span>Coût estimé par incident (support, downtime)</span>
+            <input type="text" name="cout_incident" placeholder="Montant + Devise">
+          </div>
+
+          <div class="pov-field pov-field--full">
+            <span>Temps moyen consacré à la résolution des problèmes de performance</span>
+            <input type="text" name="temps_resolution" placeholder="Ex: 4 heures, 2 jours..." required>
+          </div>
+
+          <div class="pov-field pov-field--full">
+            <span>Principales causes de rework :</span>
+            <div class="pov-checkbox-grid">
+              <label class="pov-checkbox-choice"><input type="checkbox" name="rework_causes" value="tard"> Problèmes détectés trop tard</label>
+              <label class="pov-checkbox-choice"><input type="checkbox" name="rework_causes" value="manque_tests"> Manque de tests</label>
+              <label class="pov-checkbox-choice"><input type="checkbox" name="rework_causes" value="env_diff"> Différences dev/prod</label>
+              <label class="pov-checkbox-choice"><input type="checkbox" name="rework_causes" value="exigences"> Exigences mal définies</label>
+            </div>
+            <input type="text" name="rework_causes_autre" placeholder="Précisez une autre cause de rework...">
+          </div>
+
+          <div class="pov-field pov-field--full">
+            <span>Avez-vous rencontré des problèmes liés à la gestion des ressources ?</span>
+            <div class="pov-choice-grid">
+              <label class="pov-choice"><input type="radio" name="probleme_ressources" value="manque" required> Manque (surcharge, lenteur)</label>
+              <label class="pov-choice"><input type="radio" name="probleme_ressources" value="surdimensionnement" required> Surdimensionnement (coûts)</label>
+              <label class="pov-choice"><input type="radio" name="probleme_ressources" value="les_deux" required> Les deux</label>
+              <label class="pov-choice"><input type="radio" name="probleme_ressources" value="non" required> Non</label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      @if (formMessage) {
+        <div class="pov-form-message" [class.pov-form-message--success]="formMessageType === 'success'"
+             [class.pov-form-message--error]="formMessageType === 'error'">
+          {{ formMessage }}
+        </div>
+      }
+
+      <div class="pov-form-actions">
+        <p>En soumettant ce questionnaire d'évaluation, vous acceptez que vos données soient analysées dans le cadre de l'optimisation de vos processus qualité.</p>
+        <div class="pov-form-button-row">
+          <button type="button" class="pov-btn pov-btn--secondary" (click)="onCancel()">Annuler</button>
+          <button type="submit" class="pov-btn pov-btn--primary">Soumettre le formulaire</button>
+        </div>
+      </div>
+
+    </form>
+  </div>
+
+</div>

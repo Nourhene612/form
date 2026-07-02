@@ -1,0 +1,77 @@
+<div class="pov-form-page">
+
+  <!-- En-tête avec Hero et Résumé de l'Entreprise -->
+  <div class="pov-form-hero">
+    <div>
+      <div class="pov-form-eyebrow">Confirmation de Soumission</div>
+      <h1><span>Merci !</span> Votre formulaire a été soumis</h1>
+      <p>Voici le récapitulatif complet des informations enregistrées dans notre base de données pour votre évaluation.</p>
+    </div>
+
+    <!-- Carte latérale avec le résumé de l'entreprise -->
+    <div class="pov-form-summary">
+      <h2>{{ submissionData?.companyName }}</h2>
+      <ul>
+        <li><span>✓</span> <strong>Contact :</strong> {{ submissionData?.contactName }}</li>
+        <li><span>✓</span> <strong>Date :</strong> {{ submissionData?.submissionDate | date:'dd/MM/yyyy HH:mm' }}</li>
+        <li><span>✓</span> <strong>Référence :</strong> #{{ submissionData?.submissionId }}</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Conteneur global en lecture seule (Shell) -->
+  <div class="pov-form-shell">
+    <div class="pov-form-content-view">
+      
+      <!-- Bannière de succès de soumission -->
+      <div class="pov-form-feedback pov-form-feedback--success">
+        ✓ Les données ont été synchronisées avec succès avec la base de données. Un email de confirmation a été envoyé à {{ submissionData?.email }}.
+      </div>
+
+      <!-- Section 1 : Informations Générales -->
+      <div class="pov-form-section">
+        <div class="pov-form-section-title">
+          <div class="pov-form-section-number">1</div>
+          <div>
+            <h3>Informations Générales</h3>
+            <p>Identité, entreprise et coordonnées du contact principal</p>
+          </div>
+        </div>
+
+        <div class="pov-form-grid">
+          <div class="pov-field">
+            <span>Nom de l'entreprise</span>
+            <div class="pov-value-display">{{ submissionData?.companyName }}</div>
+          </div>
+          <div class="pov-field">
+            <span>Nom du contact</span>
+            <div class="pov-value-display">{{ submissionData?.contactName }}</div>
+          </div>
+          <div class="pov-field">
+            <span>Adresse Email</span>
+            <div class="pov-value-display">{{ submissionData?.email }}</div>
+          </div>
+          <div class="pov-field">
+            <span>Numéro de Téléphone</span>
+            <div class="pov-value-display">{{ submissionData?.phone || 'Non renseigné' }}</div>
+          </div>
+          <div class="pov-field">
+            <span>Secteur d'activité</span>
+            <div class="pov-value-display">{{ submissionData?.sector || 'Non renseigné' }}</div>
+          </div>
+          <div class="pov-field">
+            <span>Date de Soumission</span>
+            <div class="pov-value-display">{{ submissionData?.submissionDate | date:'longDate' }}</div>
+          </div>
+        </div>
+      </div>
+
+    
+      
+
+      
+
+    </div>
+  </div>
+
+</div>
