@@ -42,7 +42,7 @@
           </div>
           <div class="pov-field">
             <span>Mobile</span>
-            <input type="tel" name="mobile">
+            <input type="tel" name="mobile" pattern="^\+?[0-9\s\-]{7,20}$" inputmode="tel" title="Téléphone valide : chiffres, espaces et tirets autorisés, optionnellement précédés de +">
           </div>
           <div class="pov-field">
             <span>Entreprise</span>
@@ -285,12 +285,12 @@
         <div class="pov-form-grid">
           <div class="pov-field">
             <span>Ressources (FTE) dédiées à la performance</span>
-            <input type="number" name="ressources_fte" placeholder="Nombre de personnes" required>
+            <input type="number" name="ressources_fte" placeholder="Nombre de personnes" required min="0" step="1" inputmode="numeric">
           </div>
 
           <div class="pov-field">
             <span>Coût estimé par incident (support, downtime)</span>
-            <input type="text" name="cout_incident" placeholder="Montant + Devise">
+            <input type="number" name="cout_incident" placeholder="Montant" min="0" step="0.01" inputmode="decimal" title="Entrez un montant numérique. Ex: 1200 ou 1500.50">
           </div>
 
           <div class="pov-field pov-field--full">
